@@ -1,0 +1,451 @@
+{
+  "start": "START",
+  "nodes": {
+    "START": {
+      "type": "start",
+      "text": "Welcome to the Daily Reflection Tree.",
+      "target": "A1_Q1"
+    },
+
+    "A1_Q1": {
+      "type": "question",
+      "axis": "Locus",
+      "text": "When a project fails, what response feels closest?",
+      "options": [
+        {
+          "text": "Blame circumstances",
+          "signal": "victim",
+          "target": "A1_DECISION_1"
+        },
+        {
+          "text": "Seek lessons",
+          "signal": "victor",
+          "target": "A1_DECISION_1"
+        },
+        {
+          "text": "Wait for rescue",
+          "signal": "victim",
+          "target": "A1_DECISION_1"
+        },
+        {
+          "text": "Take corrective action",
+          "signal": "victor",
+          "target": "A1_DECISION_1"
+        }
+      ]
+    },
+
+    "A1_DECISION_1": {
+      "type": "decision",
+      "text": "How do you interpret setbacks?",
+      "routes": {
+        "victim": "A1_V1",
+        "victor": "A1_X1"
+      }
+    },
+
+    "A1_V1": {
+      "type": "question",
+      "axis": "Locus",
+      "text": "When commitments become difficult, what happens?",
+      "options": [
+        { "text": "Make excuses", "signal": "victim", "target": "A1_V2" },
+        {
+          "text": "Hope others step in",
+          "signal": "victim",
+          "target": "A1_V2"
+        },
+        {
+          "text": "Recommit and adjust",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        },
+        {
+          "text": "Take ownership",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        }
+      ]
+    },
+
+    "A1_V2": {
+      "type": "question",
+      "axis": "Locus",
+      "text": "What feels natural in setbacks?",
+      "options": [
+        {
+          "text": "Circumstances control outcomes",
+          "signal": "victim",
+          "target": "A1_REFLECT_REACTIVE"
+        },
+        {
+          "text": "Wait for better conditions",
+          "signal": "victim",
+          "target": "A1_REFLECT_REACTIVE"
+        },
+        {
+          "text": "Experiment with response",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        },
+        {
+          "text": "Find lessons",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        }
+      ]
+    },
+
+    "A1_X1": {
+      "type": "question",
+      "axis": "Locus",
+      "text": "When progress slows?",
+      "options": [
+        {
+          "text": "Recalibrate strategy",
+          "signal": "victor",
+          "target": "A1_X2"
+        },
+        {
+          "text": "Persist intentionally",
+          "signal": "victor",
+          "target": "A1_X2"
+        },
+        {
+          "text": "Complain about delay",
+          "signal": "victim",
+          "target": "A1_V2"
+        },
+        { "text": "Hope luck changes", "signal": "victim", "target": "A1_V2" }
+      ]
+    },
+
+    "A1_X2": {
+      "type": "question",
+      "axis": "Locus",
+      "text": "What drives improvement?",
+      "options": [
+        {
+          "text": "Feedback and adjustment",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        },
+        {
+          "text": "Ownership",
+          "signal": "victor",
+          "target": "A1_REFLECT_AGENCY"
+        },
+        {
+          "text": "Better luck",
+          "signal": "victim",
+          "target": "A1_REFLECT_REACTIVE"
+        },
+        {
+          "text": "Someone else solves it",
+          "signal": "victim",
+          "target": "A1_REFLECT_REACTIVE"
+        }
+      ]
+    },
+
+    "A1_REFLECT_AGENCY": {
+      "type": "reflection",
+      "text": "You show awareness of agency under pressure.",
+      "target": "BRIDGE_1_2"
+    },
+
+    "A1_REFLECT_REACTIVE": {
+      "type": "reflection",
+      "text": "You may externalize control under stress.",
+      "target": "BRIDGE_1_2"
+    },
+
+    "BRIDGE_1_2": {
+      "type": "bridge",
+      "text": "Shift to contribution pattern.",
+      "target": "A2_Q1"
+    },
+
+    "A2_Q1": {
+      "type": "question",
+      "axis": "Orientation",
+      "text": "In group work?",
+      "options": [
+        {
+          "text": "Serve success",
+          "signal": "contribution",
+          "target": "A2_DECISION"
+        },
+        {
+          "text": "Extra effort",
+          "signal": "contribution",
+          "target": "A2_DECISION"
+        },
+        {
+          "text": "Expect recognition",
+          "signal": "entitlement",
+          "target": "A2_DECISION"
+        },
+        {
+          "text": "Compare expectations",
+          "signal": "entitlement",
+          "target": "A2_DECISION"
+        }
+      ]
+    },
+
+    "A2_DECISION": {
+      "type": "decision",
+      "text": "Orientation?",
+      "routes": {
+        "contribution": "A2_C1",
+        "entitlement": "A2_E1"
+      }
+    },
+
+    "A2_C1": {
+      "type": "question",
+      "axis": "Orientation",
+      "text": "Leadership view?",
+      "options": [
+        { "text": "Service", "signal": "contribution", "target": "A2_C2" },
+        { "text": "Guide others", "signal": "contribution", "target": "A2_C2" },
+        { "text": "Privilege", "signal": "entitlement", "target": "A2_E1" },
+        {
+          "text": "Authority reward",
+          "signal": "entitlement",
+          "target": "A2_E1"
+        }
+      ]
+    },
+
+    "A2_C2": {
+      "type": "question",
+      "axis": "Orientation",
+      "text": "When others struggle?",
+      "options": [
+        {
+          "text": "Support",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        },
+        {
+          "text": "Coach",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        },
+        {
+          "text": "Focus self",
+          "signal": "entitlement",
+          "target": "A2_REFLECT_ENTITLE"
+        },
+        {
+          "text": "Expect independence",
+          "signal": "entitlement",
+          "target": "A2_REFLECT_ENTITLE"
+        }
+      ]
+    },
+
+    "A2_E1": {
+      "type": "question",
+      "axis": "Orientation",
+      "text": "Rewards?",
+      "options": [
+        { "text": "Deserve more", "signal": "entitlement", "target": "A2_E2" },
+        {
+          "text": "Feel overlooked",
+          "signal": "entitlement",
+          "target": "A2_E2"
+        },
+        {
+          "text": "Celebrate shared wins",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        },
+        {
+          "text": "Shift mindset",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        }
+      ]
+    },
+
+    "A2_E2": {
+      "type": "question",
+      "axis": "Orientation",
+      "text": "Collaboration priority?",
+      "options": [
+        {
+          "text": "Credit",
+          "signal": "entitlement",
+          "target": "A2_REFLECT_ENTITLE"
+        },
+        {
+          "text": "Recognition",
+          "signal": "entitlement",
+          "target": "A2_REFLECT_ENTITLE"
+        },
+        {
+          "text": "Shared wins",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        },
+        {
+          "text": "Growth",
+          "signal": "contribution",
+          "target": "A2_REFLECT_CONTRIB"
+        }
+      ]
+    },
+
+    "A2_REFLECT_CONTRIB": {
+      "type": "reflection",
+      "text": "Contribution-oriented behavior.",
+      "target": "BRIDGE_2_3"
+    },
+
+    "A2_REFLECT_ENTITLE": {
+      "type": "reflection",
+      "text": "Notice expectation vs contribution.",
+      "target": "BRIDGE_2_3"
+    },
+
+    "BRIDGE_2_3": {
+      "type": "bridge",
+      "text": "Shift to decision radius.",
+      "target": "A3_Q1"
+    },
+
+    "A3_Q1": {
+      "type": "question",
+      "axis": "Radius",
+      "text": "Decision focus?",
+      "options": [
+        { "text": "Self", "signal": "self", "target": "A3_DECISION" },
+        { "text": "Balanced", "signal": "balanced", "target": "A3_DECISION" },
+        { "text": "Others", "signal": "other", "target": "A3_DECISION" },
+        { "text": "Collective", "signal": "other", "target": "A3_DECISION" }
+      ]
+    },
+
+    "A3_DECISION": {
+      "type": "decision",
+      "routes": {
+        "self": "A3_R1",
+        "balanced": "A3_Q2",
+        "other": "A3_Q2"
+      }
+    },
+
+    "A3_R1": {
+      "type": "question",
+      "axis": "Radius",
+      "text": "Decision driver?",
+      "options": [
+        {
+          "text": "Personal benefit",
+          "signal": "self",
+          "target": "A3_REFLECT_SELF"
+        },
+        {
+          "text": "Expect others adjust",
+          "signal": "self",
+          "target": "A3_REFLECT_SELF"
+        },
+        {
+          "text": "Balance",
+          "signal": "balanced",
+          "target": "A3_REFLECT_GROWTH"
+        },
+        {
+          "text": "Collective good",
+          "signal": "other",
+          "target": "A3_REFLECT_STEWARD"
+        }
+      ]
+    },
+
+    "A3_Q2": {
+      "type": "question",
+      "axis": "Radius",
+      "text": "Others succeed?",
+      "options": [
+        { "text": "Feel overlooked", "signal": "self", "target": "A3_Q3" },
+        { "text": "Respect", "signal": "balanced", "target": "A3_Q3" },
+        { "text": "Celebrate", "signal": "other", "target": "A3_Q3" },
+        { "text": "Shared success", "signal": "other", "target": "A3_Q3" }
+      ]
+    },
+
+    "A3_Q3": {
+      "type": "question",
+      "axis": "Radius",
+      "text": "Who is centered?",
+      "options": [
+        { "text": "Me", "signal": "self", "target": "A3_REFLECT_SELF" },
+        {
+          "text": "Me + others",
+          "signal": "balanced",
+          "target": "A3_REFLECT_GROWTH"
+        },
+        { "text": "System", "signal": "other", "target": "A3_REFLECT_STEWARD" },
+        {
+          "text": "Stakeholders",
+          "signal": "other",
+          "target": "A3_REFLECT_STEWARD"
+        }
+      ]
+    },
+
+    "A3_REFLECT_SELF": {
+      "type": "reflection",
+      "text": "Narrow focus under stress.",
+      "target": "RESULT_REACTIVE"
+    },
+
+    "A3_REFLECT_GROWTH": {
+      "type": "reflection",
+      "text": "Balanced thinking emerging.",
+      "target": "RESULT_GROWTH"
+    },
+
+    "A3_REFLECT_STEWARD": {
+      "type": "reflection",
+      "text": "Stewardship mindset.",
+      "target": "RESULT_STEWARDSHIP"
+    },
+
+    "RESULT_REACTIVE": {
+      "type": "summary",
+      "title": "Reactive Pattern",
+      "text": "Externalized control tendency.",
+      "practice": ["Ownership", "Contribution", "System thinking"],
+      "path": "Victim → Entitlement → Self",
+      "target": "END"
+    },
+
+    "RESULT_GROWTH": {
+      "type": "summary",
+      "title": "Growth Pattern",
+      "text": "Developing agency.",
+      "practice": ["Consistency", "Contribution", "Perspective"],
+      "path": "Agency → Growth",
+      "target": "END"
+    },
+
+    "RESULT_STEWARDSHIP": {
+      "type": "summary",
+      "title": "Stewardship Pattern",
+      "text": "System-level thinking.",
+      "practice": ["Leadership", "Scaling impact", "Responsibility"],
+      "path": "Agency → Stewardship",
+      "target": "END"
+    },
+
+    "END": {
+      "type": "end",
+      "text": "Reflection complete."
+    }
+  }
+}
