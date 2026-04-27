@@ -34,7 +34,6 @@ This demonstrates how psychological frameworks can be engineered into determinis
 4. Decision Tree Diagram
 <img width="4020" height="5530" alt="diagram-tree" src="https://github.com/user-attachments/assets/ed5e0ba9-af08-4475-a20f-03153efaed37" />
 
-(Add screenshots here)
 
 ## Run Locally
 npm install
